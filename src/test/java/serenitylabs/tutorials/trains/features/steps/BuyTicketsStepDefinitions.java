@@ -29,7 +29,6 @@ public class BuyTicketsStepDefinitions {
     public void set_the_stage() {
         OnStage.setTheStage(new OnlineCast());
     }
-
     @Given("^that (.*) has decided to check available tickets$")
     public void decided_to_travel_by_train(String personaName) throws Throwable {
         theActorCalled(personaName).attemptsTo(
@@ -37,7 +36,6 @@ public class BuyTicketsStepDefinitions {
         );
     }
 
-    @Given("^that (.*) has decided to check season tickets$")
     public void decided_to_buy_a_season_ticket(String personaName) throws Throwable {
         theActorCalled(personaName).attemptsTo(
                 Navigate.to(BuySeasonTickets)
